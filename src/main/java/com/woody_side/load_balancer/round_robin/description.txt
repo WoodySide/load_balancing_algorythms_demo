@@ -1,0 +1,14 @@
+Round robin
+
+This method continuously rotates a list of services that are attached to it.
+When the virtual server receives a request, it assigns the connection to the first service in the list,
+and then moves that service to the bottom of the list.
+
+ Advantage:
+
+- Simple implementation, no need to record the status of various services, it is a stateless load balancing strategy.
+
+ Disadvantage:
+
+- When the performance of each server is inconsistent, it cannot be allocated according to the performance of the server,
+and server resources cannot be reasonably used.
