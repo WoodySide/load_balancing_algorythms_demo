@@ -1,4 +1,4 @@
-#Different load balancing algorithms
+# Different load balancing algorithms
 
 - Round robin
 - Source Address Hash
