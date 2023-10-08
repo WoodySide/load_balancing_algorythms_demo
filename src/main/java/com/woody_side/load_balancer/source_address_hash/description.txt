@@ -1,0 +1,5 @@
+Source address hash
+
+The idea of source address hashing is to obtain the IP address value accessed by the client,
+calculate a value through the hash function, and use the value to perform a modulus operation on the size of the server list.
+The result is the serial number of the server to be accessed.

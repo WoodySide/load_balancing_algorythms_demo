@@ -1,0 +1,5 @@
+Random
+
+Through the system random function, one of them is randomly selected for access according to the size of the back-end server list.
+It can be known from the theory of probability statistics that as the amount of calls increases, its actual effect is getting closer and closer
+to the average distribution of traffic to each back-end server, which is the effect of polling.
