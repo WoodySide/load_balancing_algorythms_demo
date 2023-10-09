@@ -1,0 +1,7 @@
+Weight round robin
+
+Different servers may have different machine configurations and current system loads,
+so their pressure resistance is also different.
+Give machines with high configurations and low loads to be given higher weights to allow them to process more requests, while lower Configured,
+high-load machines are assigned lower weights to reduce their system load. The weighted polling method can deal with this problem well,
+and assign the request sequence to the back end according to the weight.
