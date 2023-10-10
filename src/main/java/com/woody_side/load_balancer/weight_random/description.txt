@@ -1,0 +1,4 @@
+Weight random
+
+Similar to the weighted polling method, the weighted random method also configures different weights according to different configurations and load conditions of the back-end server.
+The difference is that it randomly selects servers based on weight, not order.

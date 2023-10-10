@@ -1,14 +1,11 @@
-package com.woody_side.load_balancer.weight_round_robin;
+package com.woody_side.load_balancer.weight_random;
 
 import com.woody_side.load_balancer.LoadBalancer;
 import com.woody_side.load_balancer.util.StabIpAddresses;
 
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
-public class WeightRoundRobin extends LoadBalancer {
-
-    private static final AtomicInteger counter = new AtomicInteger(0);
+public class WeightRandom extends LoadBalancer {
 
     @Override
     public String getServer() {
@@ -19,7 +16,8 @@ public class WeightRoundRobin extends LoadBalancer {
                 .map(Map.Entry::getKey)
                 .toList();
 
-        return ips.get(counter.getAndAccumulate(ips.size(),
-                (curr, n) -> curr >= n - 1? 0: curr + 1));
+        int randomIp = new Random().nextInt(ips.size());
+
+        return ips.get(randomIp);
     }
 }
