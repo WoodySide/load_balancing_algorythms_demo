@@ -1,0 +1,7 @@
+Least connections
+
+The minimum connection method is based on the current connection status of the server for load balancing.
+When a request comes, the server with the least current connection number will be selected to process the request.
+This can also be extended to select the server based on the minimum CPU usage of the server and the efficiency of processing requests per unit of time.
+The minimum number of connections method is only an algorithm for dynamically allocating servers.
+Through parameter calculation of various dimensions, a more balanced solution for dynamically allocating servers can be found suitable for different scenarios.
